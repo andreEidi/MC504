@@ -27,3 +27,8 @@ Para compilar o programa, divido em diferentes arquivos (semaphore e bonequinho)
 Em seguida, para executá-lo utilize:
 
 - **./semaphore**
+
+
+## Observação:
+- Após pesquisas e testes há uma incompatibilidade entre a biblioteca de semaforos entre o Linux e o MAC OS
+- [![SemaphorePosix raises deprecation warnings on macOS / iOS](https://github.com/godotengine/godot/issues/24418)](https://github.com/godotengine/godot/issues/24418)
