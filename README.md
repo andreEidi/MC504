@@ -9,11 +9,18 @@ Esse projeto consiste na aplicação aplicação prática de conceitos explorado
 
 O problema pensado foi adaptado de um dos exemplos apresentados no livro [![The Little Book of Semaphores](https://greenteapress.com/wp/semaphores/)](https://greenteapress.com/wp/semaphores/) seção 7.3, "The Room party Problem".
 
-Nessa perspectiva, o problema idealizado por nosso grupo consiste em uma adaptação, como dito anteriormente, do problema mencionado. Sendo assim, temos a seguinte situação: Um(a) professor(a) chega em sua sala para dar aula, mas é interrompido continuamente por alunos de outras salas que se alocam na frente da sala de sua turma. Ao ultrapassar um certo número de alunos gerando muito barulho, o(a) professor(a), incomodado(a), se desloca até a porta para expulsar os alunos de lá
+Nessa perspectiva, o problema idealizado por nosso grupo consiste em uma adaptação, como dito anteriormente, do problema mencionado. Sendo assim, temos a seguinte situação: Um(a) professor(a) chega em sua sala para dar aula, mas é interrompido continuamente por alunos de outras salas que se alocam na frente da sala de sua turma. Ao ultrapassar um certo número de alunos gerando muito barulho, o(a) professor(a) começa a se sentir incomodado(a) com os alunos que não param de aparecer em sua porta, sendo assim, se desloca até ela para expulsar os alunos de lá. O programa entra em loop entre as ações de alunos se alocarem na porta e expulsá-los. 
 
 Dessa forma, teremos algumas restrições:
-- Teremos no máximo 20 estudantes que podem se alocar na porta da sala (note que este número é variável e pode ser mudado no código)
-- O professor pode expulsar as pessoas da porta de sua sala somente quando o número de estudantes em sua porta for maior ou igual a 10
+- Teremos no máximo 18 estudantes que podem se alocar na porta da sala (note que este número é variável e pode ser mudado no código)
+- O professor pode expulsar as pessoas da porta de sua sala somente quando o número de estudantes em sua porta for **maior ou igual** a 10
 - Enquanto o professor estiver expulsando as pessoas de sua porta nenhum estudante pode se alocar para a frente da mesma
 - O professor não sai da porta até que todos os estudantes tenham saido da porta 
 - Há apenas um professor, isto é, pessoa que pode expulsar os alunos da porta
+
+## Instruções de compilação e execução
+
+Para compilar o programa, divido em diferentes arquivos (semaphore e bonequinho), utilize o seguinte comando:
+    **gcc semaphore.c -o semaphore**
+Em seguida, para executá-lo utilize:
+    **./semaphore**
