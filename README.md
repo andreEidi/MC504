@@ -21,6 +21,9 @@ Dessa forma, teremos algumas restrições:
 ## Instruções de compilação e execução
 
 Para compilar o programa, divido em diferentes arquivos (semaphore e bonequinho), utilize o seguinte comando:
-    **gcc semaphore.c -o semaphore**
+
+- **gcc semaphore.c -o semaphore**
+
 Em seguida, para executá-lo utilize:
-    **./semaphore**
+
+- **./semaphore**
