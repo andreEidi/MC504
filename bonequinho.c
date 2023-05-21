@@ -58,32 +58,23 @@ char **bonequinho(int boneco)
     return bonecoLista;
 }
 
-void handleAlunosNaPorta(int numAlunosPorta)
+void printaLinhaAlunos(int numAlunosPorta, int seed)
 {
     char ***matrizBonecos = (char ***)malloc(numAlunosPorta * sizeof(char **));
-    int count = 0;
 
     int randInt;
+    srand(seed);
 
     for (int i = 0; i < numAlunosPorta; i++)
     {
         randInt = rand() % 3 + 1;
         matrizBonecos[i] = bonequinho(randInt);
-
-        count++;
-        if (count % 5 == 0)
-        {
-            printaMatrizDeBonecos(matrizBonecos, count);
-            printf("\n");
-            count = 0;
-        }
-    }
-    if (numAlunosPorta % 5 != 0)
-    {
-        printaMatrizDeBonecos(matrizBonecos, count);
     }
 
-    for (int i = 0; i < count; i++)
+    printaMatrizDeBonecos(matrizBonecos, numAlunosPorta);
+    printf("\n");
+
+    for (int i = 0; i < numAlunosPorta; i++)
     {
         for (int j = 0; j < 3; j++)
         {
@@ -94,6 +85,19 @@ void handleAlunosNaPorta(int numAlunosPorta)
     free(matrizBonecos);
 }
 
+void handleAlunosNaPorta(int numAlunos)
+{
+    while (numAlunos >= 5)
+    {
+        printaLinhaAlunos(5, numAlunos);
+        numAlunos -= 5;
+    }
+
+    if (numAlunos > 0)
+    {
+        printaLinhaAlunos(numAlunos, numAlunos);
+    }
+}
 void door()
 {
     char *door[] = {" __________", "|     |    |", "|  |CB16|  |",
